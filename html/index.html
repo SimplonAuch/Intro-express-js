@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hi all !</title>
+	<script type="text/javascript" src="jquery.min.js"></script>
+</head>
+<body>
+
+	<h1>Alors, ca gazze ?</h1>
+
+
+
+	<script type="text/javascript">
+		
+		$.ajax({
+			url: 'http://localhost:3000/auth',
+			type: 'post',
+			data: {
+				'login': 'orel',
+				'pass':'koko'
+			}
+		}).done(function(data){
+			console.log(data);
+
+			if(data=="ok")
+				window.location.href="/account";
+				else
+				alert("Tu chies Morice");
+		});
+
+	</script>
+</body>
+</html>
